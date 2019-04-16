@@ -6,12 +6,22 @@ nav.addEventListener('mouseover', function(event){
     event.target.style.color = "blue";
 })
 
+nav.addEventListener('click', function(event){
+    event.preventDefault();
+})
+
 const background = document.querySelector('html')
+
 
 background.addEventListener('keydown', function(event) {
     event.target.style.color = "aqua";
  
 })
+
+background.addEventListener('keyup', function(event){
+    event.target.style.color = "black";
+})
+
 background.addEventListener('scroll', function(event) {
     event.target.style.fontFamily = 'Helvetica'
 })
@@ -43,6 +53,14 @@ header.forEach(function(element){
     element.addEventListener('mouseout', function(event) {
         event.target.style.color = "black"
     })
+
+    element.addEventListener('mouseup', function(event){
+        event.target.style.color = "orange"
+
+    })
 })
 
+window.addEventListener("load", function(){
+    alert("Press Ok to continue!")
+})
 
